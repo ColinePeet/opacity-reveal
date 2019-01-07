@@ -1,13 +1,7 @@
-p{
-    text-align-last: left;
+header, main{
+    width: 65%;
+    margin: 0 auto;
 }
 img{
     width: 100%;
-    padding: 20px 0 20px 0;
-}
-.reveal{
-    transition: .5s all ease-in-out;
-}
-.hidden{
-    opacity: 0;
 }

@@ -1,28 +1,137 @@
-body{
-    max-width: 100vw;
-    margin: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    header{
-        padding: 10px;
-        h1{
-            text-align: center;
-            padding: 20px;
-        }
-    }
-    main{
-        padding: 10px;
-        .bloc-img{
+main{
+    .section-flex{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        font-family: 'Roboto', sans-serif;
+        max-height: 1400px;
+        .project{
+            width: 46%;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            img{
-                width: 48%;
+            flex-direction: column;
+            align-items: center;
+            
+            // PROJETS ONGLET
+            .project-title{
+                font-size: 16px;
+                margin: 18px 0 45px;
             }
         }
-        .bloc-txt{
-            display: flex;
-            justify-content: space-between;
+
+        // CONTENU PROJECT
+        .description-p{
+            width: 90%;
+            text-align: center;
+            font-size: 26px;
+            margin: 0;
+            top: 400px;
+            margin-bottom: 20px;
         }
+        .single-project{
+            span{
+                font-family: 'Times New Roman', Times, serif;
+                color: rgb(255, 119, 119);
+                font-weight: bold;
+                margin-bottom: 25px;
+                margin-top: 50px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.project-head{
+    position: relative;
+    margin-bottom: 90px;
+    h5{
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    margin: 0;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+}
+
+
+// ABOUT/CONTACT
+
+.about{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    max-height: 700px;
+    .cv-section{
+        width: 46%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 90%;
+            right: 0;
+            height: 100%;
+            background-color: rgb(255, 238, 238);
+            }  
+        .cv-title{
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+            font-weight: bold; 
+            color: rgb(255, 119, 119);
+        }
+        // texte
+        .cv-info{
+            p{
+            margin-bottom: 10px;
+                .bold{
+                font-weight: bold;
+                }
+            }
+        }
+    }
+    // texte intro
+    .txt-section{
+        width: 46%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        .txt{
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    // formulaire contact
+    .formu{
+        display: flex;
+        flex-direction: column;
+        label{
+            font-weight: bold;
+            margin: 10px 0 10px 0;      
+        }
+        input, textarea{
+            width: 90%;
+            border-radius: 3px;
+            height: 32px;
+            border: 1px solid rgb(255, 119, 119);
+            padding: 10px;
+        }
+        textarea{
+            height: 200px;
+        }
+    }
+    .submit-button{
+        margin: 15px 0 10px 0;
+        border-radius: 3px;
+        border: 1px solid rgb(255, 119, 119);
+        background-color: white;
+        padding: 5px 15px;
+        font-weight: bold;
+        cursor: pointer;
     }
 }
