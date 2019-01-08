@@ -50,10 +50,10 @@ $(window).on('scroll', function() {
 
 // reveal au clic
 $(".section").each(function(){
-    $(".section").click(function() {
+    $(".tabs, .project").click(function() {
+        $(".animate-clic").removeClass('reveal');
         let windowHeight = $(window).height();
         function reveal () {
-        $(this).removeClass('reveal');
         $(".animate-clic").each(function() {
           let fromTop = $(this).offset().top;
           let windowScroll = $(window).scrollTop();
