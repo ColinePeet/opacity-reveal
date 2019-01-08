@@ -5,3 +5,19 @@ header, main{
 img{
     width: 100%;
 }
+
+
+//jquery
+.darker{
+    color: #FF0000;
+}
+.hidden{
+    display: none !important;
+}
+.opacity{
+    opacity: 0;
+}
+.reveal{
+    transition: .5s all ease-in-out;
+    opacity: 1;
+}

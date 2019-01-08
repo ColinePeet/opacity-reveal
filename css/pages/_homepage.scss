@@ -11,41 +11,99 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            
             // PROJETS ONGLET
             .project-title{
                 font-size: 16px;
-                margin: 18px 0 45px;
+                margin: 12px 0 38px;
+                cursor: pointer;
             }
+            .case-img-project{
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                border-radius: 7px;
+
+                .img-txt-hover{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: .3s all ease-in-out;             
+                    &::before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255,255,255,0);
+                    position: absolute;
+                    z-index: 1;
+                }
+                    .hover-title{
+                        font-weight: bold;
+                        color: rgb(70, 70, 70);
+                        margin: 8px;
+                        font-size: 34px;
+                        z-index: 2;
+                        text-align: center;
+                    }
+                    .hover-description{
+                        font-size: 25px;
+                        color: rgb(70, 70, 70);
+                        z-index: 2;
+                    }
+                    &:hover{
+                        opacity: 1;
+                        &::before{
+                            background: rgba(255,255,255,0.7);
+                        }
+                    }
+                }
+            }    
         }
 
         // CONTENU PROJECT
         .description-p{
-            width: 90%;
+            width: 83%;
             text-align: center;
-            font-size: 26px;
+            font-size: 27px;
             margin: 0;
-            top: 400px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .single-project{
+            margin-top: 40px;
+            img{
+                border-radius: 7px;   
+            }
             span{
                 font-family: 'Times New Roman', Times, serif;
                 color: rgb(255, 119, 119);
                 font-weight: bold;
                 margin-bottom: 25px;
-                margin-top: 50px;
-                font-size: 20px;
+                font-size: 21px;
+            }
+            &.single-project:first-child{
+                margin-top: 100px;
             }
         }
     }
 }
+
 .project-head{
     position: relative;
     margin-bottom: 90px;
+    img{
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
     h5{
     font-size: 60px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 40px;
     position: absolute;
     margin: 0;
     bottom: -30px;
@@ -54,11 +112,10 @@ main{
 }
 }
 
-
 // ABOUT/CONTACT
 
 .about{
-    display: none;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
@@ -78,6 +135,8 @@ main{
             right: 0;
             height: 100%;
             background-color: rgb(255, 238, 238);
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
             }  
         .cv-title{
             font-family: 'Roboto', sans-serif;
